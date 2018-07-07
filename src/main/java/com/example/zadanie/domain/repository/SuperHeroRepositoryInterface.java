@@ -1,21 +1,21 @@
 package com.example.zadanie.domain.repository;
 
 import com.example.zadanie.domain.SuperHero;
+import org.springframework.stereotype.Repository;
 
-import javax.annotation.PostConstruct;
-import java.util.List;
+import java.util.Collection;
 
+@Repository
 public interface SuperHeroRepositoryInterface {
-    //dodaj
+
     void addSuperHero(String name, int age);
 
-    //print
-    List<SuperHero> printSuperHeroList();
+    Collection<SuperHero> printSuperHeroList();
 
     SuperHero getOneSuperHero(String name);
 
     SuperHero remove(String name);
 
-    @PostConstruct
+
     void buildStarterList();
 }

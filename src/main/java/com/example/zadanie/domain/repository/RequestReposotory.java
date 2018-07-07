@@ -1,5 +1,6 @@
 package com.example.zadanie.domain.repository;
 import com.example.zadanie.domain.Request;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
@@ -18,6 +19,7 @@ public class RequestReposotory {
         return requestList;
     }
 
+    /*
     @PostConstruct
     public void builtStartList(){
         addRequestList("Walcz z wrogiem");
@@ -25,6 +27,7 @@ public class RequestReposotory {
         addRequestList("Zabij wroga");
         addRequestList("Pomóż innym w walce");
     }
+    */
 
     @Override
     public String toString() {
@@ -37,5 +40,21 @@ public class RequestReposotory {
          System.out.println(requestList.remove(usun));
    }
 
- 
+   Random random = new Random();
+
+   //lista losowych zadań
+    @Scheduled(fixedDelay = 5000)
+    public void listRandomRequest(){
+        List<String> description = new ArrayList<>();
+        description.add("Walcz z wrogiem ");
+        description.add("Pomóż człowiekowi");
+        description.add("Zabij wroga");
+        description.add("Uaktywnik super-moc");
+
+        addRequestList(description.get(random.nextInt(description.size())));
+
+      //  System.out.println(description.get(random.nextInt(description.size())));
+
+    }
+
 }

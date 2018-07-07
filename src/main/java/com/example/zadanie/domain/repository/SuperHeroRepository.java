@@ -2,7 +2,6 @@ package com.example.zadanie.domain.repository;
 
 
 import com.example.zadanie.domain.SuperHero;
-import com.sun.javafx.collections.MappingChange;
 
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class SuperHeroRepository implements SuperHeroRepositoryInterface {
+public class SuperHeroRepository implements SuperHeroRepositoryInterface{
 
 
     private Map<String, SuperHero> superHeroMap = new HashMap<>();
@@ -25,9 +24,8 @@ public class SuperHeroRepository implements SuperHeroRepositoryInterface {
 
 //print
     @Override
-    public List<SuperHero> printSuperHeroList(){
-        List<SuperHero> superHeroList = new ArrayList<>(superHeroMap.values());
-        return superHeroList;
+    public Collection<SuperHero> printSuperHeroList(){
+    return superHeroMap.values();
     }
 
   @Override

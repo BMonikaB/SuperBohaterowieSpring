@@ -9,7 +9,9 @@ public class SuperHero {
     private int age;
     private Request request;
 
-    SuperHero(){};
+    public SuperHero(){};
+
+
     public SuperHero(String name, int age){
         this.name = name;
         this.age = age;
@@ -27,6 +29,7 @@ public class SuperHero {
         return age;
     }
 
+
     public String getName() {
         return name;
     }
@@ -43,7 +46,7 @@ public class SuperHero {
     public String toString() {
         return "Name :" + name + " age :" + age + " quest :" + request;
     }
-
+/*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,4 +61,6 @@ public class SuperHero {
 
         return Objects.hash(name, age);
     }
+
+    */
 }
