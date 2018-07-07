@@ -2,7 +2,6 @@ package com.example.zadanie.controllers;
 
 import com.example.zadanie.domain.SuperHero;
 import com.example.zadanie.domain.repository.SuperHeroRepository;
-import com.example.zadanie.services.SuperHeroServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,16 +15,17 @@ import java.util.List;
 public class SuperHeroController {
 
 
-    @Autowired
-    SuperHeroServices superHeroServices;
-
+@Autowired
+SuperHeroRepository superHeroRepository;
 
     @RequestMapping("/superhero")
     public String getSuperHero(Model model){
-        List<SuperHero> heroList = superHeroServices.printSuperHero();
-      model.addAttribute("superheroo",heroList);
-      return "superheroes";
+        List<SuperHero> heroList = superHeroRepository.printSuperHeroList();
+        model.addAttribute("superheroo",heroList);
+        return "superheroes";
     }
+
+
 
     @RequestMapping("/newsuperhero")
     public String crateSuperHero(Model model){

@@ -46,7 +46,7 @@ public class SuperHero {
     public String toString() {
         return "Name :" + name + " age :" + age + " quest :" + request;
     }
-/*
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -62,5 +62,4 @@ public class SuperHero {
         return Objects.hash(name, age);
     }
 
-    */
 }

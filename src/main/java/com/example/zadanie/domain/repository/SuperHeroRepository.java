@@ -6,6 +6,7 @@ import com.example.zadanie.domain.SuperHero;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
+import javax.validation.constraints.Max;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,10 +24,20 @@ public class SuperHeroRepository implements SuperHeroRepositoryInterface{
     }
 
 //print
+    /*
     @Override
     public Collection<SuperHero> printSuperHeroList(){
     return superHeroMap.values();
     }
+    */
+
+
+    @Override
+    public List<SuperHero> printSuperHeroList(){
+        List<SuperHero> printSuperList = new ArrayList<>(superHeroMap.values());
+        return printSuperList;
+    }
+
 
   @Override
   public SuperHero getOneSuperHero(String name){
