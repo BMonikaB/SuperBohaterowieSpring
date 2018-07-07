@@ -25,12 +25,12 @@ SuperHeroRepository superHeroRepository;
         return "superheroes";
     }
 
-
-
-    @RequestMapping("/newsuperhero")
-    public String crateSuperHero(Model model){
-        model.addAttribute("superhero", new SuperHero());
-        return "create";
+    @RequestMapping("/createHero")
+    public String createSuperHero(Model model){
+        model.addAttribute("superhero",new SuperHero());
+        return "createsuperhero";
     }
+
+
 
 }
