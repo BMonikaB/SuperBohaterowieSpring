@@ -1,21 +1,31 @@
 package com.example.zadanie.domain;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
+
+
 
 public class SuperHero {
 
+
     private String name;
+
     private int age;
     private Request request;
 
     public SuperHero(){};
 
-
     public SuperHero(String name, int age){
+
         this.name = name;
         this.age = age;
     }
+
+
 
     public Request getRequest() {
         return request;
@@ -24,6 +34,7 @@ public class SuperHero {
     public void setRequest(Request request) {
         this.request = request;
     }
+
 
     public int getAge() {
         return age;

@@ -11,22 +11,36 @@
 </head>
 <body>
 <div class="container">
-<table class="table">
+
+    <label th:class="controls-pane">Czas:</label>
+    <p th:text="${timecom.getTime()}"/>
+    <label th:class="controls-pane">Punkty:</label>
+    <p th:text="${infosuperhero.getPunkty()}"/>
+
+    <table class="table">
     <thead>
-        <tr><td>Imie</td><td>Wiek</td></tr>
+        <tr>
+            <td>Imie</td>
+            <td>Wiek</td>
+            <td>Zadanie do wykonania</td>
+            <td>Usun</td>
+            <td><a href="/superhero"></a> </td>
+        </tr>
     </thead>
     <tbody>
     <tr th:each="superhero :${superheroatr}">
 
         <td th:text="${superhero.name}"></td>
         <td th:text="${superhero.age}"></td>
+        <td></td>
+        <td><a th:href="${'/superhero/delete/'+superhero.getName()}">Usun</a></td>
 
     </tr>
     </tbody>
 
 </table>
     <div th:class="row">
-<a href="/addsuperhero">Dodaj nowego</a>
+<button type="button"> <a href="/addsuperhero">Dodaj nowego</a></button>
     </div>
 </div>
 </body>

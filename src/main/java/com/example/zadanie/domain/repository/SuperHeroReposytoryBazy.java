@@ -7,9 +7,11 @@ import java.util.List;
 
 @Repository
 public class SuperHeroReposytoryBazy implements SuperHeroRepositoryInterface {
+
+
     @Override
-    public void addSuperHero(String name, int age) {
-        System.out.println("Nie z tego");
+    public void addSuperHero( String name, int age) {
+
     }
 
     @Override

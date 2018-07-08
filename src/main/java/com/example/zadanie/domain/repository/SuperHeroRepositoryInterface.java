@@ -3,7 +3,7 @@ package com.example.zadanie.domain.repository;
 import com.example.zadanie.domain.SuperHero;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface SuperHeroRepositoryInterface {
@@ -12,7 +12,7 @@ public interface SuperHeroRepositoryInterface {
 
     void addSuperHero2(SuperHero superHero);
 
-    Collection<SuperHero> printSuperHeroList();
+    List<SuperHero> printSuperHeroList();
 
     SuperHero getOneSuperHero(String name);
 
