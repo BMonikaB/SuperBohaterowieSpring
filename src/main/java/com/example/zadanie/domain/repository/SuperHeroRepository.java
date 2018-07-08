@@ -23,6 +23,12 @@ public class SuperHeroRepository implements SuperHeroRepositoryInterface{
         superHeroMap.put(name, new SuperHero(name,age));
     }
 
+    @Override
+    public void addSuperHero2(SuperHero superHero) {
+        superHeroMap.put(superHero.getName(),superHero );
+    }
+
+
 //print
     /*
     @Override

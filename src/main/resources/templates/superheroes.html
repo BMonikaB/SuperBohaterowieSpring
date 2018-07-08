@@ -11,21 +11,23 @@
 </head>
 <body>
 <div class="container">
+<table class="table">
+    <thead>
+        <tr><td>Imie</td><td>Wiek</td></tr>
+    </thead>
+    <tbody>
+    <tr th:each="superhero :${superheroatr}">
 
-    <table class="table">
-        <thead>
-        <tr>
-            <td>Imie rycerza</td>
-            <td>Wiek</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each=" superhero : ${superheroo}">
-            <td th:text="${superhero.name}"></td>
-            <td th:text="${superhero.age}"></td>
-        </tr>
-        </tbody>
-    </table>
+        <td th:text="${superhero.name}"></td>
+        <td th:text="${superhero.age}"></td>
+
+    </tr>
+    </tbody>
+
+</table>
+    <div th:class="row">
+<a href="/addsuperhero">Dodaj nowego</a>
+    </div>
 </div>
 </body>
 </html>

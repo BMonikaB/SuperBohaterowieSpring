@@ -10,6 +10,8 @@ public interface SuperHeroRepositoryInterface {
 
     void addSuperHero(String name, int age);
 
+    void addSuperHero2(SuperHero superHero);
+
     Collection<SuperHero> printSuperHeroList();
 
     SuperHero getOneSuperHero(String name);

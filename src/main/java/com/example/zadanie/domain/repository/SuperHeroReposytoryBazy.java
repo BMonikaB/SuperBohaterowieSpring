@@ -13,6 +13,11 @@ public class SuperHeroReposytoryBazy implements SuperHeroRepositoryInterface {
     }
 
     @Override
+    public void addSuperHero2(SuperHero superHero) {
+
+    }
+
+    @Override
     public List<SuperHero> printSuperHeroList() {
         return null;
     }
